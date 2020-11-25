@@ -46,17 +46,20 @@ var radarChart = new Chart(ctx, {
     labels: ["working out","eating","sleeping","school","other"],
     datasets: [{
       label: "jake",
-      backgroundColor: "rgba(400,0,0,0.2)",
-      data: [1,2,8,3,6,4]
+      borderColor: "blue",
+      fill: false,
+      data: [2,3,8,6,4]
     },
      {
       label: "steve",
-      backgroundColor: "rgba(0,0,200,0.2)",
+      borderColor: "green",
+      fill: false,
       data: [2,2,8,6,6]
     },
     {
       label: "cameron",
-      backgroundColor: "rgba(0,0,600,0.2)",
+      borderColor: "purple",
+      fill: false,
       data: [2,2,8,6,6],
     }]
   }
@@ -69,17 +72,20 @@ var radarChart = new Chart(ctx, {
       labels: ["working out","eating","sleeping","school","other"],
       datasets: [{
         label: "jake",
-        backgroundColor: "rgba(400,0,0,0.2)",
-        data: [1,2,6,3,6,6]
+        borderColor: "blue",
+        fill: false,
+        data: [2,2,6,6,6]
       },
        {
         label: "steve",
-        backgroundColor: "rgba(0,0,200,0.2)",
+        borderColor: "green",
+        fill: false,
         data: [2,2,7,6,7]
       },
       {
         label: "cameron",
-        backgroundColor: "rgba(0,0,600,0.2)",
+        borderColor: "purple",
+        fill: false,
         data: [0,5,4,10,8],
       }]
     }
