@@ -10,11 +10,11 @@
 
       <h1>Covid day</h1>
       <h2>Hours spent in each day doing the following activities</h2>
-      <canvas id="myChart" width="1600" height="900"></canvas>
+      <canvas id="covidChart" width="1600" height="900"></canvas>
 
       <h1>Pre-Covid Day</h1>
       <h2>Hours spent in each day doing the following activities</h2>
-      <canvas id="myChart2" width="1600" height="900"></canvas>
+      <canvas id="PrecovidChart" width="1600" height="900"></canvas>
 
     </div>
 
@@ -39,53 +39,53 @@
 //     }]
 // }
 
-var ctx = document.getElementById("myChart");
+var ctx = document.getElementById("covidChart");
 var radarChart = new Chart(ctx, {
   type: 'radar',
   data:{
     labels: ["working out","eating","sleeping","school","other"],
     datasets: [{
-      label: "jake",
-      borderColor: "blue",
-      fill: false,
-      data: [2,3,8,6,4]
+      label: "Jake",
+      borderColor: "black",
+      backgroundColor: "rgba(0,0,255,0.5)",
+      data: [4,3,8,6,4]
     },
      {
-      label: "steve",
-      borderColor: "green",
-      fill: false,
-      data: [2,2,8,6,6]
+      label: "Steve",
+      borderColor: "black",
+      backgroundColor: "rgba(255,0,0,0.5)",
+      data: [3,2,8,6,6]
     },
     {
-      label: "cameron",
-      borderColor: "purple",
-      fill: false,
+      label: "Cameron",
+      borderColor: "black",
+      backgroundColor: "rgba(0,255,0,0.5)",
       data: [2,2,8,6,6],
     }]
   }
   });
 
-  var ctx = document.getElementById("myChart2");
+  var ctx = document.getElementById("PrecovidChart");
   var radarChart = new Chart(ctx, {
     type: 'radar',
     data:{
       labels: ["working out","eating","sleeping","school","other"],
       datasets: [{
-        label: "jake",
-        borderColor: "blue",
-        fill: false,
+        label: "Jake",
+        borderColor: "black",
+        backgroundColor: "rgba(0,0,255,0.5)",
         data: [2,2,6,6,6]
       },
        {
-        label: "steve",
-        borderColor: "green",
-        fill: false,
+        label: "Steve",
+        borderColor: "black",
+        backgroundColor: "rgba(255,0,0,0.5)",
         data: [2,2,7,6,7]
       },
       {
-        label: "cameron",
-        borderColor: "purple",
-        fill: false,
+        label: "Cameron",
+        borderColor: "black",
+        backgroundColor: "rgba(0,255,0,0.5)",
         data: [0,5,4,10,8],
       }]
     }
