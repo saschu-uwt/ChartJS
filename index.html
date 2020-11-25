@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chart JS examples</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <h1>Covid day</h1>
+      <h2>Hours spent in each day doing the following activities</h2>
+      <canvas id="myChart" width="1600" height="900"></canvas>
+
+      <h1>Pre-Covid Day</h1>
+      <h2>Hours spent in each day doing the following activities</h2>
+      <canvas id="myChart2" width="1600" height="900"></canvas>
+
+    </div>
+
+    <script>
+//     // labels along the x-axis
+//     var activities = ["working out","eating","sleeping","school","other"];
+//     // For drawing the lines
+//     var jake = [1,2,8,3,6,4];
+//     var jakePRE = [1,2,6,3,6,6];
+//     var steve = [2,2,8,6,6];
+//     var stevePRE = [2,2,7,6,7];
+//     var cameron = [2,2,8,6,6];
+//     var cameronPRE = [0,5,4,10,8];
+//
+//     var ctx = document.getElementById("myChart");
+//     var myChart = new Chart(ctx, {
+//       type: 'radar',
+//       data: data: {
+//           labels: ['working out', 'eating', 'sleeping', 'school', 'other'],
+//           datasets: [{
+//           data: [20, 10, 4, 2]
+//     }]
+// }
+
+var ctx = document.getElementById("myChart");
+var radarChart = new Chart(ctx, {
+  type: 'radar',
+  data:{
+    labels: ["working out","eating","sleeping","school","other"],
+    datasets: [{
+      label: "jake",
+      backgroundColor: "rgba(400,0,0,0.2)",
+      data: [1,2,8,3,6,4]
+    },
+     {
+      label: "steve",
+      backgroundColor: "rgba(0,0,200,0.2)",
+      data: [2,2,8,6,6]
+    },
+    {
+      label: "cameron",
+      backgroundColor: "rgba(0,0,600,0.2)",
+      data: [2,2,8,6,6],
+    }]
+  }
+  });
+
+  var ctx = document.getElementById("myChart2");
+  var radarChart = new Chart(ctx, {
+    type: 'radar',
+    data:{
+      labels: ["working out","eating","sleeping","school","other"],
+      datasets: [{
+        label: "jake",
+        backgroundColor: "rgba(400,0,0,0.2)",
+        data: [1,2,6,3,6,6]
+      },
+       {
+        label: "steve",
+        backgroundColor: "rgba(0,0,200,0.2)",
+        data: [2,2,7,6,7]
+      },
+      {
+        label: "cameron",
+        backgroundColor: "rgba(0,0,600,0.2)",
+        data: [0,5,4,10,8],
+      }]
+    }
+    });
+
+    </script>
+  </body>
+  <!-- Thanks to Tobias Ahlin, whose chart.js tutorial forms the basis of the line graph portion of this exercise -->
+</html>
